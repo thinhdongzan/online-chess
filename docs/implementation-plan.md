@@ -1,6 +1,6 @@
 # Kế hoạch triển khai 6 tuần
 
-Đây là kế hoạch công việc **tương lai**, chưa có phần mềm hoặc test được triển khai. Lần khởi tạo tài liệu này không tạo source, cấu hình build, thư viện hoặc test. Các mã FR/P tham chiếu [yêu cầu](requirements.md); API và giao thức tham chiếu [thiết kế kỹ thuật](technical-design.md).
+Đây là kế hoạch công việc **tương lai**. Hiện đã có tài liệu và khung source với các file `.c`/`.h` rỗng; chưa có mã triển khai, cấu hình build, thư viện được cài đặt hoặc test. Việc tạo khung không đồng nghĩa các đề xuất thiết kế đã được duyệt. Các mã FR/P tham chiếu [yêu cầu](requirements.md); API và giao thức tham chiếu [thiết kế kỹ thuật](technical-design.md).
 
 Kế hoạch không giả định số thành viên. Mạng, Chess Engine và lưu trữ là ba nhánh có thể phát triển song song sau khi thống nhất dữ liệu/giao thức. Nếu nguồn lực hạn chế, thực hiện xen kẽ theo phụ thuộc; không cần chia sẵn một người cho mỗi module.
 
@@ -11,7 +11,7 @@ Kế hoạch không giả định số thành viên. Mạng, Chess Engine và l�
 **Công việc chính:**
 
 1. Duyệt P-01 đến P-11, đặc biệt xếp hạng, mất kết nối, phạm vi hòa, môi trường POSIX và định dạng giao thức; cập nhật tài liệu theo quyết định.
-2. Sau khi duyệt, mới tạo cấu trúc C tối thiểu, cấu hình build và chọn thư viện JSON, băm mật khẩu cùng cách dùng SQLite.
+2. Sau khi duyệt, bắt đầu triển khai mã C trong khung hiện có, tạo cấu hình build và chọn thư viện JSON, băm mật khẩu cùng cách dùng SQLite.
 3. Làm server `select()` và client CLI tối thiểu; thực hiện bộ đệm, khung độ dài + JSON, đọc/ghi một phần và giới hạn khung.
 4. Song song nếu phù hợp: chốt biểu diễn `GameState` và tạo bàn cờ xuất phát; phác dữ liệu rồi khởi tạo ba bảng SQLite theo thiết kế đã duyệt.
 
@@ -112,4 +112,4 @@ Song song là khả năng tổ chức công việc, không phải yêu cầu có
 
 Tạo một client C và một server C tối thiểu trên môi trường đã chọn: server dùng `select()` với socket không chặn, cả hai dùng khung 4 byte độ dài + JSON theo thiết kế đã duyệt. Kiểm chứng nhận đủ khung khi dữ liệu bị chia nhỏ, tách nhiều khung gộp chung và phục vụ được hai client độc lập. Đây là nền để thêm đăng nhập và thách đấu; chưa ghép luật cờ ở bước đầu.
 
-Chỉ thực hiện bước này sau khi duyệt thiết kế, không thuộc phạm vi khởi tạo bốn tài liệu hiện tại.
+Chỉ thực hiện bước này sau khi duyệt thiết kế; hiện mới tạo khung file rỗng, chưa thực hiện bước lập trình này.

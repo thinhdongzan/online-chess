@@ -1,6 +1,6 @@
 # Thiết kế kỹ thuật
 
-**Trạng thái:** thiết kế dự kiến, chưa có mã nguồn. Các lựa chọn P-01 đến P-11 được định nghĩa trong [yêu cầu](requirements.md) và đều là **Đề xuất thiết kế** cần duyệt. Tên hàm, kiểu dữ liệu, giao thức và cây thư mục bên dưới là phương án tham chiếu, chưa phải API hoặc file đã tồn tại.
+**Trạng thái:** đã tạo khung source với các file `.c`/`.h` rỗng theo cây thư mục ở mục 8, chưa có mã triển khai. Các lựa chọn P-01 đến P-11 được định nghĩa trong [yêu cầu](requirements.md) và đều là **Đề xuất thiết kế** cần duyệt. Tên hàm, kiểu dữ liệu và giao thức bên dưới là phương án tham chiếu, chưa phải API đã triển khai. Việc tạo khung không đồng nghĩa các đề xuất đã được duyệt.
 
 ## 1. Kiến trúc Client–Server
 
@@ -235,9 +235,9 @@ Thứ tự xét sau một nước: xác định có nước hợp lệ hay khôn
 
 Tự hòa ở lần lặp thứ 3 và mốc 50 nước là quy ước đơn giản hóa của ứng dụng; chưa có lệnh yêu cầu hòa hoặc xét nước dự định đi. Nếu muốn bám đầy đủ thủ tục luật giải đấu, phải sửa P-07, giao thức và kế hoạch trước khi lập trình. Không có tìm kiếm nước tốt, đánh giá thế cờ hoặc AI đối thủ.
 
-## 8. Cấu trúc source code dự kiến
+## 8. Cấu trúc khung source code
 
-**Chỉ là minh họa trong tài liệu. Không tạo các đường dẫn này lúc khởi tạo tài liệu.** Tách vừa đủ theo trách nhiệm, chưa cần nhiều tầng thư mục.
+**Các đường dẫn `src/` dưới đây đã được tạo; tất cả file `.c`/`.h` đều rỗng.** Chú thích mô tả trách nhiệm dự kiến khi triển khai, không phải chức năng đã có. Chưa tạo cấu hình build, cài thư viện hoặc tạo test.
 
 ```text
 src/
@@ -255,7 +255,8 @@ src/
   client/
     main.c                        # khởi tạo client
     cli.c / cli.h                 # nhập lệnh, nhận sự kiện và hiển thị
-tests/                            # chỉ bổ sung trong giai đoạn triển khai
 ```
 
-Network phía client có thể dùng vòng lặp `select()` theo dõi socket và đầu vào terminal để vẫn nhận sự kiện khi chờ người dùng nhập lệnh. Chia sẻ định dạng giao thức và quy ước tọa độ; không cần đưa toàn bộ Engine sang client. Tên file thực tế và cách build sẽ xác định ở giai đoạn triển khai, sau khi duyệt thiết kế.
+Thư mục `tests/` chỉ bổ sung trong giai đoạn triển khai, chưa tạo lúc khởi tạo khung.
+
+Network phía client có thể dùng vòng lặp `select()` theo dõi socket và đầu vào terminal để vẫn nhận sự kiện khi chờ người dùng nhập lệnh. Chia sẻ định dạng giao thức và quy ước tọa độ; không cần đưa toàn bộ Engine sang client. Cách build sẽ xác định ở giai đoạn triển khai, sau khi duyệt thiết kế.

@@ -2,7 +2,14 @@
 
 Ứng dụng cho phép hai người chơi cờ vua qua mạng, đồng thời hỗ trợ nhiều người kết nối và nhiều trận diễn ra song song. Server quản lý trạng thái chính, kiểm tra nước đi và quyết định kết quả; client cung cấp giao diện dòng lệnh cho người chơi.
 
-**Trạng thái hiện tại:** mới có tài liệu thiết kế, chưa có source code, cấu hình build, thư viện được cài đặt hoặc test. Các chức năng dưới đây là chức năng **dự kiến**, chưa được triển khai. Thời gian triển khai dự kiến là 6 tuần sau khi duyệt thiết kế.
+**Trạng thái hiện tại:** đã có tài liệu thiết kế và khung source gồm các file `.c`/`.h` rỗng trong `src/common`, `src/server`, `src/chess` và `src/client`. Chưa có mã triển khai, cấu hình build, thư viện được cài đặt hoặc test. Các chức năng dưới đây là chức năng **dự kiến**, chưa được triển khai. Thời gian triển khai dự kiến là 6 tuần sau khi duyệt thiết kế.
+
+## Thành viên nhóm
+
+| STT | Họ và tên | MSSV | GitHub |
+| --- | --- | --- | --- |
+| 1 | Nguyễn Đức Mạnh | 20235775 | [ManhNguyen213](https://github.com/ManhNguyen213) |
+| 2 | Đồng Văn Thịnh | 20235840 | [thinhdongzan](https://github.com/thinhdongzan) |
 
 ## Công nghệ dự kiến
 

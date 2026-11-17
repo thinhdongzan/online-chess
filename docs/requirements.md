@@ -1,6 +1,6 @@
 # Yêu cầu và phạm vi
 
-Tài liệu này là mốc tham chiếu cho [thiết kế kỹ thuật](technical-design.md) và [kế hoạch 6 tuần](implementation-plan.md). Hiện tại chỉ có tài liệu; mọi hành vi phần mềm mô tả dưới đây đều là dự kiến.
+Tài liệu này là mốc tham chiếu cho [thiết kế kỹ thuật](technical-design.md) và [kế hoạch 6 tuần](implementation-plan.md). Hiện tại đã có tài liệu và khung source với các file `.c`/`.h` rỗng; mọi hành vi phần mềm mô tả dưới đây đều là dự kiến.
 
 ## 1. Mục tiêu và phạm vi
 
@@ -50,7 +50,7 @@ Ví dụ theo P-01: người hạng 7 có thể thách đấu hạng 17, nhưng 
 - Client dùng Terminal CLI; Chess Engine tự lập trình bằng C.
 - Server quản lý trạng thái chính, kiểm tra nước đi và quyết định kết quả.
 - Triển khai trong 6 tuần; chưa làm GUI, AI đối thủ hoặc đồng hồ thi đấu.
-- Lần khởi tạo này chỉ tạo bốn tài liệu Markdown; chưa tạo source, cấu hình build, cài thư viện hoặc tạo test.
+- Lần khởi tạo tài liệu ban đầu chỉ tạo bốn file Markdown. Theo yêu cầu tiếp theo, đã bổ sung khung source với các file `.c`/`.h` rỗng; chưa triển khai code, tạo cấu hình build, cài thư viện hoặc tạo test.
 
 ## 5. Đề xuất bổ sung và điểm cần thống nhất
 
