@@ -1,0 +1,30 @@
+# Build directories and binaries
+bin/
+build/
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dll
+
+# Code coverage artifacts (gcov / lcov)
+*.gcno
+*.gcda
+*.gcov
+coverage.info
+coverage_html/
+
+# Runtime database and log files
+*.db
+*.db-shm
+*.db-wal
+*.log
+match_*.txt
+logs/
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*~
+*.swp
